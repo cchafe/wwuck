@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width">
+
+    <title>hw1 JavaScript sonification example</title>
+
+  </head>
+
+  <body>
+    <input type="button"  value="earthquakesSonification" id="go" name="go">
+    <input type="button"  value=" stop " id="stop" name="stop">
+<br> button runs the code in
+<br> earthquakesSonification.js
+<br> which is hardwired to read in data from
+<br> number-of-earthquakes-per-year-m.dat
+<br>
+<br> obtained from here:
+<br>
+<iframe src="https://datamarket.com/data/set/22p8/number-of-earthquakes-per-year-magnitude-70-or-greater-1900-1998#!ds=22p8&display=line" height="500" width="800"></iframe>
+
+<!--  /////////// hidden controls ////////////    -->
+
+    <input type="range" min="0" max="100" value="50" class="slider" id="slider"  style="display: none" >
+    <br>
+    <label for="jitometer"  style="display: none" >Timing jitter (ms)</label>&nbsp&nbsp&nbsp&nbsp&nbsp
+    <!--  Timing cushion (
+    -->
+    <label id="msCushion"  style="display: none" >not set</label> 
+    <!--  ms) 
+    -->
+    <br>
+    <input type="range" min="0" max="100" value="50" class="jitometer" id="jitometer"  style="display: none" >
+    <input type="range" min="0" max="100" value="50" class="cushion" id="cushion" style="display: none" >
+    <br>
+    <label for="jitometer"  style="display: none" >(-0.1) ------- (0.1)</label>
+<!--  ////////////////////////////////////////    -->
+
+  </body>
+  <script src="webAudio220a.js"></script>
+
+</html>
