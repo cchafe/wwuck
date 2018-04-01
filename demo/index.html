@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width">
+
+    <title>basic example</title>
+
+  </head>
+
+  <body>
+    <select id="go" name="go">
+      <option value="metro">metro</option>
+      <option value="core1clipPrint">core1clipPrint</option>
+      <option value="hw1Sonification">hw1Sonification</option>
+      <option value="hw3Streaming">hw3Streaming</option>
+    </select>
+    <input type="button"  value=" stop " id="stop" name="stop">
+    <input type="range" min="0" max="100" value="50" class="slider" id="slider">
+    <br>
+    <label for="jitometer">Timing jitter (ms)</label>&nbsp&nbsp&nbsp&nbsp&nbsp
+    Timing cushion (<label id="msCushion">not set</label> ms) 
+    <br>
+    <input type="range" min="0" max="100" value="50" class="jitometer" id="jitometer">
+    <input type="range" min="0" max="100" value="50" class="cushion" id="cushion">
+    <br>
+    <label for="jitometer">(-0.1) ------- (0.1)</label>
+  </body>
+  <script src="main8.js"></script>
+
+</html>
