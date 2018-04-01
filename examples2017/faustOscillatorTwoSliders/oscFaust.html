@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width">
+
+    <title>JavaScript Faust oscillator example</title>
+
+<style>
+:root {
+  --tick-height: 6px;
+  --everyFiveTicks-ratio: 200%;
+}
+.rangeWrap {
+  width: 90%;
+}
+.rangeWrap input {
+  width: 100%;
+  margin: 0;
+}
+.rangeWrap .ticks {
+  display: flex;
+  justify-content: space-between;
+  height: var(--tick-height);
+  margin: -1.5em 5px 0 6px;
+  font: 10px Arial;
+  counter-reset: count -1;
+}
+.rangeWrap .ticks > div {
+  height: 100%;
+  width: 1px;
+  background: silver;
+  counter-increment: count 1;
+}
+.rangeWrap .ticks > div:nth-child(5n - 4) {
+  height: var(--everyFiveTicks-ratio);
+}
+</style>
+
+  </head>
+
+  <body>
+ simple osc
+<br>
+<!--  /////////// controls ////////////    -->
+    <input type="button"  value="oscFaust" id="go" name="go">
+    <input type="button"  value=" stop " id="stop" name="stop">
+<br>
+<br>
+
+ <div class='rangeWrap'>
+    <input type="range"  min="0" max="100" id="ampSlider"  value="40" />
+    <div class='ticks' id="ampTicks">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+<br>
+<br>
+
+ <div class='rangeWrap'>
+    <input type="range"  min="0" max="10000" id="freqSlider"  value="40" />
+    <div class='ticks' id="freqTicks">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+<!--  /////////// hidden controls ////////////    -->
+
+    <br>
+    <br>
+    <label for="jitometer"  style="display: none" >Timing jitter (ms)</label>&nbsp&nbsp&nbsp&nbsp&nbsp
+    <!--  Timing cushion (
+    -->
+    <label id="msCushion"  style="display: none" >not set</label> 
+    <!--  ms) 
+    -->
+    <br>
+    <input type="range" min="0" max="100" value="50" class="jitometer" id="jitometer"  style="display: none" >
+    <input type="range" min="0" max="100" value="50" class="cushion" id="cushion" style="display: none" >
+    <br>
+    <label for="jitometer"  style="display: none" >(-0.1) ------- (0.1)</label>
+<!--  ////////////////////////////////////////    -->
+
+  </body>
+  <script src="osc.js"></script>
+  <script src="webAudio220a.js"></script>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width">
+
+    <title>JavaScript oscillator example</title>
+
+  </head>
+
+  <body>
+    <input type="button"  value="osc" id="go" name="go">
+    <input type="button"  value=" stop " id="stop" name="stop">
+<br> simple osc
+<br>
+
+
+<!--  /////////// hidden controls ////////////    -->
+
+    <input type="range" min="0" max="100" value="50" class="slider" id="slider"" >
+    <br>
+    <label for="jitometer"  style="display: none" >Timing jitter (ms)</label>&nbsp&nbsp&nbsp&nbsp&nbsp
+    <!--  Timing cushion (
+    -->
+    <label id="msCushion"  style="display: none" >not set</label> 
+    <!--  ms) 
+    -->
+    <br>
+    <input type="range" min="0" max="100" value="50" class="jitometer" id="jitometer"  style="display: none" >
+    <input type="range" min="0" max="100" value="50" class="cushion" id="cushion" style="display: none" >
+    <br>
+    <label for="jitometer"  style="display: none" >(-0.1) ------- (0.1)</label>
+<!--  ////////////////////////////////////////    -->
+
+  </body>
+  <script src="webAudio220a.js"></script>
+
+</html>
